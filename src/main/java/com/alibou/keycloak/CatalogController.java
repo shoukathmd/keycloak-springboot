@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/catalog")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "http://localhost:3000,http://vm2:3000", allowedHeaders = "*")
 public class CatalogController {
 
     @GetMapping
