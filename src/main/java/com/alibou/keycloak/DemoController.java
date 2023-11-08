@@ -25,7 +25,7 @@ public class DemoController {
 
 
     @GetMapping("/hello-3")
-   // @PreAuthorize("hasRole('client_admin')")
+    @PreAuthorize("hasRole('client_admin')")
     public String hello3() {
         return "Hello from Spring boot & Keycloak - I am open";
     }
