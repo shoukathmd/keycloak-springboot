@@ -15,8 +15,8 @@ import java.util.List;
 public class CatalogController {
 
     @GetMapping
-    @PreAuthorize("hasAnyRole('client_admin','client_user')")
-  //  @PreAuthorize("hasAnyRole('client_admin')")
+  // @PreAuthorize("hasAnyRole('client_admin','client_user')")
+    @PreAuthorize("hasAnyRole('client_user')")
     public List<CatalogItem> getCatalogItems() {
         // Create a list of CatalogItem objects and populate them with your data
         List<CatalogItem> catalogItems = new ArrayList<>();

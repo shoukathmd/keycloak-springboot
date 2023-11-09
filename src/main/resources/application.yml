@@ -21,7 +21,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: https://vm1:8444/realms/Alibou
+          issuer-uri: https://vm1:8444/realms/myrealm
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
 server:
   port: 8081
@@ -29,6 +29,6 @@ server:
 jwt:
   auth:
     converter:
-      resource-id: alibou-rest-api
+      resource-id: dal-sep
       principle-attribute: preferred_username
 
