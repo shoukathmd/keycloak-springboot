@@ -1,5 +1,6 @@
 package com.alibou.keycloak;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,8 @@ import java.util.List;
 public class CatalogController {
 
     @GetMapping
+    @PreAuthorize("hasAnyRole('client_admin','client_user')")
+  //  @PreAuthorize("hasAnyRole('client_admin')")
     public List<CatalogItem> getCatalogItems() {
         // Create a list of CatalogItem objects and populate them with your data
         List<CatalogItem> catalogItems = new ArrayList<>();
